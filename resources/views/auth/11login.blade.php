@@ -28,7 +28,7 @@
                           <i  class="fa fa-question-circle" aria-hidden="true"></i>
                         </div>
                         <div class="logo">
-                            <img style="max-width: 130px; height: auto" src="{{ asset('newadmin/img/tsul_logo.png') }}" alt="">
+                            <img style="max-width: 130px; height: auto" src="{{ asset('newadmin/img/niu_logo.png') }}" alt="">
                         </div>
 
                         <div class="form_out">

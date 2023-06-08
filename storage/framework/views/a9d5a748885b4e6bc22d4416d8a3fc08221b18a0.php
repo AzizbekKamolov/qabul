@@ -1,9 +1,8 @@
 <?php $__env->startSection('content'); ?>
     <div class="all_login">
-         <?php
-   ?>
+
         <div class="login_modal">
-            
+             
             <div class="bg-white">
                 <div class="row ">
 
@@ -19,7 +18,6 @@
                         <div class="logo">
                             <img style="max-width: 250px; height: auto" src="<?php echo e(asset('newadmin/img/niu_logo.png')); ?>" alt="">
                         </div>
-
                         <div class="form_out">
                             <div class="form_all">
                                 <div class="language">
@@ -38,34 +36,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            	<form class="form_login" method="POST" action="<?php echo e(route('login')); ?>">
+                            	<form class="form_login" method="POST" action="<?php echo e(route('forgot.password')); ?>">
 									<?php echo csrf_field(); ?>
 	                                <div class="item_form">
+	                                	<h3><?php echo app('translator')->get('login.New password will be sent to your phone number'); ?></h3>
 	                                    <h3><?php echo app('translator')->get('login.Telefon raqam'); ?></h3>
 	                                    <input name="email" class="phn" value="<?php echo e(old('email')); ?>" placeholder="+998_________" type="text">
-	                                    <?php $__errorArgs = ['email'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?><span class="error">!<?php echo e($message); ?></span><?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>
-	                                </div>
-	                                <div class="item_form">
-	                                    <h3><?php echo app('translator')->get('login.Password'); ?></h3>
-                                        
-	                                    <input class="<?php $__errorArgs = ['password'];
-$__bag = $errors->getBag($__errorArgs[1] ?? 'default');
-if ($__bag->has($__errorArgs[0])) :
-if (isset($message)) { $__messageOriginal = $message; }
-$message = $__bag->first($__errorArgs[0]); ?> is-invalid <?php unset($message);
-if (isset($__messageOriginal)) { $message = $__messageOriginal; }
-endif;
-unset($__errorArgs, $__bag); ?>" autocomplete="current-password" type="password" name="password">
-                                        <i  class="fa fa-eye eye"></i>
-                                        <i class="fa fa-eye-slash eye_slash" aria-hidden="true"></i>
-	                                    <?php $__errorArgs = ['password'];
+                                        <?php $__errorArgs = ['email'];
 $__bag = $errors->getBag($__errorArgs[1] ?? 'default');
 if ($__bag->has($__errorArgs[0])) :
 if (isset($message)) { $__messageOriginal = $message; }
@@ -76,11 +53,10 @@ unset($__errorArgs, $__bag); ?>
 	                                </div>
 
 	                            </form>
-	                            <button class="login"><?php echo app('translator')->get('login.Login'); ?></button>
-                                <button class="sign"><?php echo app('translator')->get('login.Sign up'); ?></button>
-                                <a class="forgot" href="<?php echo e(route('forgot.password.form')); ?>"><?php echo app('translator')->get('login.Forgot Your Password?'); ?></a>
+                                 <button class="login"><?php echo app('translator')->get('login.Reset'); ?></button>
+                                <button class="sign"><?php echo app('translator')->get('login.Sign in'); ?></button>
                                 <div class="addm">
-                                    <h6>ADMISSION 2022</h6>
+                                    <h6>ADMISSION 2020</h6>
                                 </div>
                             </div>
                         </div>
@@ -98,9 +74,9 @@ unset($__errorArgs, $__bag); ?>
     		$('.form_login').submit();
     	});
     	$('.sign').click(function(){
-    		window.location.href = ' <?php echo e(route('register')); ?> ';
+    		window.location.href = ' <?php echo e(route('login')); ?> ';
     	});
     </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('admin.layouts.login_layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\myProject\OSPanel\domains\qabul\resources\views/auth/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('admin.layouts.login_layout', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\myProject\OSPanel\domains\qabul\resources\views/auth/forgot.blade.php ENDPATH**/ ?>
