@@ -11,11 +11,13 @@
   <!-- Your custom styles (optional) -->
   <link href="{{ asset('newadmin/css/style.css') }}" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="{{ asset('newadmin/css/media.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('newadmin/css/media.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('newadmin/css/font-awesome.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('newadmin/css/owl.carousel.min.css') }}">
   {{-- <link rel="stylesheet" href="{{ asset('newadmin/css/datatables.min.css') }}"> --}}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="{{ asset('newadmin/img/favicon.png') }}" type="image/x-icon">
 </head>
 <body>
   <style type="text/css">
