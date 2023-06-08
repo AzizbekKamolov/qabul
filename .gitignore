@@ -6,7 +6,6 @@
 /qabul2022.zip
 /database.zip
 .env
-.env.backup
 .phpunit.result.cache
 Homestead.json
 Homestead.yaml
