@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class SmsSend extends Model
 {
 //    protected $table = 'responses_send_sms';
-    protected $username = 'yuridikinstitut';
-    protected $password = 'ph1$Tv@dX';
-    public $url = 'http://91.204.239.44/broker-api/send';
+    protected $username = '';
+    protected $password = '';
+    public $url = '';
 
     public function send_one_sms($number, $text)
     {
